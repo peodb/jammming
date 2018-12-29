@@ -48,7 +48,7 @@ savePlaylist() {
   Spotify.savePlaylist(this.state.playlistName, trackURIs);
   console.log(`clearing playlist state`);
   this.setState({playlistTracks: [],
-                 playlistName: `New playlist`, //do not have any affect but do not understand why, tracks are cleared but now name....
+                 playlistName: `New playlist`, //do not have any affect but do not understand why, tracks are cleared but not name....
                 });
 
 
