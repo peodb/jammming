@@ -10,8 +10,8 @@ constructor(props) {
 
 }
 
-handleNameChange(event) {
-console.log(`change of PL name: ${event.target.value}`);
+{/* change of playlist name field*/}
+handleNameChange(event) {;
 this.props.onNameChange(event.target.value);
 }
 

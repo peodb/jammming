@@ -22,6 +22,7 @@ class App extends Component {
     this.search = this.search.bind(this);
 }
 
+{/* used when plus sign in result list is clicked, will add the related track to the playlist*/}
 addTrack(track) {
   if (this.state.playlistTracks.find(savedTrack => savedTrack.id === track.id)) {
     return;
@@ -31,6 +32,7 @@ addTrack(track) {
   this.setState({playlistTracks: array});
 }
 
+{/* used when minus sign in result list is clicked, will remove the related track from the playlist*/}
 removeTrack(track) {
   const array = this.state.playlistTracks;
   const index = array.findIndex(x => x.id === track.id)
@@ -38,10 +40,12 @@ removeTrack(track) {
   this.setState({playlistTracks: array});
 }
 
+{/* triggered for each change of playlist field, every keystroke*/}
 updatePlaylistName(name) {
   this.setState({playlistName: name})
 }
 
+{/* will save current playlist to spotify*/}
 savePlaylist() {
   const trackURIs =[];
   this.state.playlistTracks.forEach(track => trackURIs.push(track.uri));
@@ -53,13 +57,14 @@ savePlaylist() {
 
 
 }
-
+{/* when search button is clicked*/}
 search(searchTerm) {
 Spotify.search(searchTerm).then(tracks => {
     this.setState({searchResults: tracks});
   })
 }
 
+{/* title, searchbar and then search result and playlist columns*/}
   render() {
     return (
       <div>

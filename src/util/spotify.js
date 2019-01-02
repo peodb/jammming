@@ -5,6 +5,7 @@ const redirectURI = 'http://localhost:3000/';
 const Spotify = {
 
 search(term) {
+  {/* when no token from before, a reload of page will be done after login to spotify(within getAccessToken) and hence user will have to enter search string again and do another search to get result list*/}
   this.getAccessToken();
    return fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`,{
     headers: {
