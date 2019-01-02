@@ -1,11 +1,11 @@
 
 var token;
-const applicationID = '***';
+const applicationID = '52d83a8faecb48efbc97225229941c6f';
 const redirectURI = 'http://polarn-spotify.surge.sh/';
 const Spotify = {
 
 search(term) {
-  {/* when no token from before, a reload of page will be done after login to spotify(within getAccessToken) and hence user will have to enter search string again and do another search to get result list*/}
+  // when no token from before, a reload of page will be done after login to spotify(within getAccessToken) and hence user will have to enter search string again and do another search to get result list
   this.getAccessToken();
    return fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`,{
     headers: {

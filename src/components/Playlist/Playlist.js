@@ -10,7 +10,7 @@ constructor(props) {
 
 }
 
-{/* change of playlist name field*/}
+// change of playlist name field
 handleNameChange(event) {;
 this.props.onNameChange(event.target.value);
 }

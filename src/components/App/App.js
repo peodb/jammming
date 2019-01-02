@@ -45,7 +45,7 @@ updatePlaylistName(name) {
   this.setState({playlistName: name})
 }
 
-{/* will save current playlist to spotify*/}
+// will save current playlist to spotify
 savePlaylist() {
   const trackURIs =[];
   this.state.playlistTracks.forEach(track => trackURIs.push(track.uri));
@@ -57,14 +57,14 @@ savePlaylist() {
 
 
 }
-{/* when search button is clicked*/}
+// when search button is clicked
 search(searchTerm) {
 Spotify.search(searchTerm).then(tracks => {
     this.setState({searchResults: tracks});
   })
 }
 
-{/* title, searchbar and then search result and playlist columns*/}
+// title, searchbar and then search result and playlist columns
   render() {
     return (
       <div>

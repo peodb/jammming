@@ -8,7 +8,7 @@ constructor(props) {
   this.addTrack = this.addTrack.bind(this);
   this.removeTrack = this.removeTrack.bind(this);
 }
-{/* as track is used for both serach result and playlist, this is used to select if to render + for search result (adding to playlist) or - for playlist (removing from playlist)*/}
+// as track is used for both serach result and playlist, this is used to select if to render + for search result (adding to playlist) or - for playlist (removing from playlist)
 renderAction(isRemoval) {
   if (isRemoval) {
     return(<a className="Track-action" onClick={this.removeTrack}>-</a>);
