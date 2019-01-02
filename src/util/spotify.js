@@ -1,6 +1,6 @@
 
 var token;
-const applicationID = '52d83a8faecb48efbc97225229941c6f';
+const applicationID = '***';
 const redirectURI = 'http://localhost:3000/';
 const Spotify = {
 
