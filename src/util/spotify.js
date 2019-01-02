@@ -1,7 +1,7 @@
 
 var token;
 const applicationID = '***';
-const redirectURI = 'http://localhost:3000/';
+const redirectURI = 'http://polarn-spotify.surge.sh/';
 const Spotify = {
 
 search(term) {
