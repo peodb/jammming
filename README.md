@@ -1,2 +1,2 @@
 # jammming
-Implemented along a course on code academy
+Implemented along a course on codecademy.com
